@@ -5,8 +5,8 @@ const About = () => {
     const {mode,selectedColor}=useSelector(state=>state.Management)
   return (
     <>
-        <div className='w-full h-auto lg:h-screen px-5 py-9 lg:px-[150px] lg:py-9 border border-red-500'>
-            <div className='w-full border border-blue-500'>
+        <div className={`w-full h-auto lg:h-screen px-5 py-9 lg:px-[150px] lg:py-9 ${mode !== "light-mode" ? "bg-black" : "bg-[rgb(241,242,251)]"}`}>
+            <div className='w-full'>
                 <div>
                     <h1 className='text-2xl font-[500]'>About Me</h1>
                     <div className={`w-[37px] h-[3px] mt-2 bg-[${selectedColor}] `}></div>
